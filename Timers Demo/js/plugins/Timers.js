@@ -1,7 +1,7 @@
 /*:
  * @plugindesc v1.0 Creates different timers.
  * @author FeelZoR
- * @param Test
+ * @param Timer Not Existing Return Value
  * @desc Set to true if you want the methods to return true if the timer doesn't exist. False otherwise.
  * @default true
  * @help ========================= Timers v1.0 by FeelZoR =========================
@@ -21,7 +21,8 @@
  * $gameTimers.isTimeElapsedOverThanSec(name, seconds); and $gameTimers.isTimeElapsedOverThanMin(name, minutes); does the same thing with seconds and minutes, respectively.
  */
  
-FLZ_Timers_valueToReturnIfNoTimer = Boolean(PluginManager.parameters('Timers')['Test'] || true);
+
+FLZ_Timers_valueToReturnIfNoTimer = Boolean(PluginManager.parameters('Timers')['Timer Not Existing Return Value'] || true);
  
 function FLZ_Timers() {
     this.paused = false;
