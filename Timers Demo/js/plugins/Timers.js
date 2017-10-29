@@ -1,5 +1,5 @@
 /*:
- * @plugindesc v1.0 Creates different timers.
+ * @plugindesc v1.1 Creates different timers.
  * @author FeelZoR
  * @param Timer Not Existing Return Value
  * @desc Set to true if you want the methods to return true if the timer doesn't exist. False otherwise.
@@ -106,7 +106,7 @@ DataManager.createGameObjects = function() {
 
 var FLZ_Timers_DataManager_makeSaveContents = DataManager.makeSaveContents;
 DataManager.makeSaveContents = function() {
-    var contents = LNM_GameTime_DataManager_makeSaveContents.call(this);
+    var contents = FLZ_Timers_DataManager_makeSaveContents.call(this);
     contents.feel_timers = $gameTimers.getTimers();
 	contents.feel_save_time = Date.now();
     return contents;
@@ -114,7 +114,7 @@ DataManager.makeSaveContents = function() {
 
 var FLZ_Timers_DataManager_extractSaveContents = DataManager.extractSaveContents;
 DataManager.extractSaveContents = function(contents) {
-    LNM_GameTime_DataManager_extractSaveContents.call(this, contents);
+    FLZ_Timers_DataManager_extractSaveContents.call(this, contents);
     var tempTimers = contents.feel_timers;
 	var difference = Date.now() - contents.feel_save_time;
 	$gameTimers.setTimers(tempTimers, difference);
