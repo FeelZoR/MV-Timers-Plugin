@@ -44,20 +44,20 @@
  *
  * ------------------------------- Script calls -------------------------------
  *
- * Use $gameTimers.isOver(name, time) to know if the Timer name is older than
+ * Use $gameTimers.isOver(name, time); to know if the Timer name is older than
  * the time specified.
  * name: Case sensitive; the name of the timer.
  * time: The time that needs to be elapsed since the last timer update for this
  *       method to return true.
  * Depending on the mode, the time needs to be in milliseconds, seconds or
  * minutes.
- * E.g.: $gameTimers.isOver("Chicken", 50) will return true if the timer
+ * E.g.: $gameTimers.isOver("Chicken", 50); will return true if the timer
  *       Chicken hasn't been updated in 50ms, 50s or 50min depending on the
  *       mode.
  *
- * Use $gameTimers.isOverVar(name, variable) to do the same than the previous
+ * Use $gameTimers.isOverVar(name, variable); to do the same than the previous
  * script call, with the content of a variable instead of a constant value.
- * E.g.: $gameTimers.isOverVar("Chicken", 2) will return true if the timer
+ * E.g.: $gameTimers.isOverVar("Chicken", 2); will return true if the timer
  *       Chicken hasn't been updated since the time specified in variable 2. It
  *       also uses the mode to decide whether it's milliseconds, seconds or
  *       minutes.
